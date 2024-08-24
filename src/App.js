@@ -5,6 +5,7 @@ import DetalhesAgentes from "./componentes/detalhes_agentes/detalhes_agentes.tsx
 import Home from "./componentes/home/home.tsx";
 import ListaDeMapas from "./componentes/mapas/inicioMapas.tsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ListaDeTiers from "./componentes/tiers/tiers.tsx";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Route path="/agentes" element={<ListaDeAgentes />} /> {/* Página de Agentes */}
                 <Route path="/detalhes_agentes/:id" element={<DetalhesAgentes />} /> {/* Detalhes de Agente */}
                 <Route path="/mapas" element={<ListaDeMapas />} /> {/* Página de Mapas */}
+                <Route path="/tiers" element={<ListaDeTiers />} /> {/* Página de Tiers */}
             </Routes>
         </Router>
     );

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Detalhes_agentes from "../detalhes_agentes/detalhes_agentes";
 
 
-export interface Atype {
+export interface Atype { //A type é o tipo dos agentes
     uuid: string
     displayName: string
     description: string
@@ -56,28 +56,28 @@ export interface Ability {
     displayIcon?: string
 }
 
-const ListaDeAgentes = () => {
+const ListaDeAgentes = () => { //função de lista dos agentes
 
-    const [data, setData] = useState<Atype[]>([]);
-    const [search, setSearch] = useState('');
-    const navigate = useNavigate();
+    const [data, setData] = useState<Atype[]>([]); //hook de use state para salvar data (inicia vazio)
+    const [search, setSearch] = useState(''); //(hook de use state para search) ainda nao implemtado
+    const navigate = useNavigate(); //navigate da biblioteca router
 
-    useEffect(() => {
+    useEffect(() => { //user Effect é um hook para salvar a api em "data"
         fetch('https://valorant-api.com/v1/agents/')
             .then((response) => response.json())
             .then((data) => {
-                // A API retorna os agentes dentro do campo "data"
+
                 setData(data.data);
             })
             .catch((error) => console.log(error));
     }, []);
 
-    const handleAgentClick = (id: string) => {
+    const handleAgentClick = (id: string) => { //handle para navegar
         navigate(`/detalhes_agentes/${id}`);
     };
 
     return (
-        <div className={"grid grid-cols-3 gap-10 bg-red-400"}>
+        <div className={"grid grid-cols-3 gap-10 bg-red-400"}> {/* grid para os agentes (dividir em 3 e criar o botao de detalhes*/}
             {data.map(agente => (
                 <div key={agente.uuid} className={"flex flex-col gap-9 justify-between mb-4 border " +
                     "border-spacing-4 border-black mt-6 rounded-xl text-3xl bg-black w-1/2" +

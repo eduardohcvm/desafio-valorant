@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Atype } from "../agentes/agentes";
 
 const DetalhesAgentes = () => {
-    const { id } = useParams<{ id: string }>(); // Pega o parâmetro 'id' da URL
+    const { id } = useParams<{ id: string }>();
     const [agente, setAgente] = useState<Atype | null>(null);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const DetalhesAgentes = () => {
 
     return (
         <div className="flex flex-row bg-red-400 justify-center items-start p-8 rounded-lg gap-8 w-screen h-screen ">
-            {/* Imagem do agente */}
+
             <div className="flex-1 flex justify-center items-center ">
                 <img
                     src={agente.fullPortrait}
