@@ -18,7 +18,7 @@ const DetalhesAgentes = () => {
     if (!agente) {
         return <div>Carregando...</div>;
     }
-
+    console.log(agente)
     return (
         <div className="flex flex-row bg-red-400 justify-center items-start p-8 rounded-lg gap-8 w-screen h-screen ">
 
@@ -48,10 +48,10 @@ const DetalhesAgentes = () => {
                     <ul className="mt-2">
                         {agente.abilities.map((ability, index) => (
                             <li key={index} className="mb-4">
-                                <strong>{ability.displayName}:</strong> {ability.description}
                                 {ability.displayIcon && (
                                     <img src={ability.displayIcon} alt={ability.displayName} className="w-8 h-8 ml-2 inline" />
                                 )}
+                                <strong>{ability.displayName}:</strong> {ability.description}
                             </li>
                         ))}
                     </ul>

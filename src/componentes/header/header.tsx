@@ -2,19 +2,21 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className="flex justify-between items-center w-screen border-6 bg-gray-800 p-4">
-            <Link to="/" className="text-white hover:bg-red-600 px-4 py-2 rounded text-2xl font-sans text-2xl">
+        <div className={"flex flex-row justify-center bg-gray-800 w-screen"}>
+        <div className="flex items-center  border-6 p-6 px-40 gap-14">
+            <Link to="/" className="text-white hover:bg-red-600 px-4 py-2 rounded text-2xl font-sans">
                 Home
             </Link>
-            <Link to="/agentes" className="text-white hover:bg-red-600 px-4 py-2 rounded text-2xl font-sans text-2xl">
+            <Link to="/agentes" className="text-white hover:bg-red-600 px-4 py-2 rounded font-sans text-2xl">
                 Agentes
             </Link>
-            <Link to="/mapas" className="text-white hover:bg-red-600 px-4 py-2 rounded text-2xl font-sans text-2xl">
+            <Link to="/mapas" className="text-white hover:bg-red-600 px-4 py-2 rounded font-sans text-2xl">
                 Mapas
             </Link>
-            <Link to="/tiers" className="text-white hover:bg-red-600 px-4 py-2 rounded text-2xl font-sans mr-3 text-2xl">
+            <Link to="/tiers" className="text-white hover:bg-red-600 px-4 py-2 rounded font-sans mr-3 text-2xl">
                 Tiers Competitivos
             </Link>
+        </div>
         </div>
     );
 };
