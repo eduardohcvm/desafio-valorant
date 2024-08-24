@@ -20,18 +20,18 @@ const DetalhesAgentes = () => {
     }
 
     return (
-        <div className="flex flex-row bg-red-100 justify-center items-start p-8 rounded-lg gap-8 w-screen h-screen ">
+        <div className="flex flex-row bg-red-400 justify-center items-start p-8 rounded-lg gap-8 w-screen h-screen ">
             {/* Imagem do agente */}
             <div className="flex-1 flex justify-center items-center ">
                 <img
                     src={agente.fullPortrait}
                     alt={`Imagem do agente ${agente.displayName}`}
-                    className="w-3/4 h-auto rounded-lg shadow-lg transition-shadow duration-500 ease-in-out hover:shadow-3xl hover:shadow-red-400"
+                    className="w-3/4 h-auto rounded-lg shadow-lg transition-shadow duration-500 ease-in-out hover:shadow-3xl hover:shadow-white"
                  />
             </div>
 
 
-            <div className="flex-1 bg-gray-700 p-6 rounded-lg shadow-lg text-white transition-shadow duration-500 ease-in-out hover:shadow-3xl hover:shadow-red-400">
+            <div className="flex-1 bg-gray-700 p-6 rounded-lg shadow-lg text-white transition-shadow duration-500 ease-in-out hover:shadow-3xl hover:shadow-white">
                 <h2 className="text-4xl font-bold mb-4">{agente.displayName}</h2>
                 <p className="text-lg mb-4">{agente.description}</p>
 

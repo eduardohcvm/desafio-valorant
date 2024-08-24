@@ -66,12 +66,12 @@ const ListaDeMapas = () => {
     const displayedMaps = mapas.slice((page - 1) * pageSize, page * pageSize);
 
     return (
-        <div className="space-y-20 bg-red-300 w-screen h-screen">
+        <div className="space-y-20 bg-red-400 w-screen h-screen">
             <div className="flex flex-col items-center gap-20">
-                <h3 className="text-4xl font-bold text-gray-800 dark:text-gray-700 mt-20">Explore os Mapas</h3>
+                <h3 className="text-4xl font-bold text-gray-800 dark:text-gray-700 mt-20 ">Explore os Mapas</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
                     {displayedMaps.map((mapa) => (
-                        <div key={mapa.uuid} className="bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+                        <div key={mapa.uuid} className="bg-gray-800 text-white p-6 rounded-lg shadow-lg transition-shadow duration-500 ease-in-out hover:shadow-3xl hover:shadow-white">
                             <h4 className="text-2xl font-bold mb-4">{mapa.displayName}</h4>
                             <img
                                 src={mapa.splash}
@@ -86,17 +86,17 @@ const ListaDeMapas = () => {
 
             <div className="flex flex-row justify-center items-center gap-14">
                 <button
-                    className="flex items-center justify-center p-4 text-white bg-blue-950 rounded-full dark:bg-gray-50 dark:text-gray-900"
+                    className="flex items-center justify-center p-4 text-white bg-blue-950 rounded-full dark:bg-gray-50 dark:text-gray-900 font-mono "
                     onClick={handlePreviousPage}
                 >
-                    <span className="material-symbols-outlined">Mapas anteriores</span>
+                    <span className="material-symbols-outlined text-2xl">Mapas anteriores</span>
                 </button>
                 <span className="text-sm font-light">{page} de {page_max}</span>
                 <button
-                    className="flex items-center justify-center p-4 text-white bg-blue-950 rounded-full dark:bg-gray-50 dark:text-gray-900"
+                    className="flex items-center justify-center p-4 text-white bg-blue-950 rounded-full dark:bg-gray-50 dark:text-gray-900 font-mono"
                     onClick={handleNextPage}
                 >
-                    <span className="material-symbols-outlined">Mais mapas</span>
+                    <span className="material-symbols-outlined text-2xl">Mais mapas</span>
                 </button>
             </div>
         </div>

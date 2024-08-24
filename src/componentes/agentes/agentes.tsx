@@ -77,9 +77,11 @@ const ListaDeAgentes = () => {
     };
 
     return (
-        <div className={"grid grid-cols-3 gap-10"}>
+        <div className={"grid grid-cols-3 gap-10 bg-red-400"}>
             {data.map(agente => (
-                <div key={agente.uuid} className={"flex flex-col gap-9 justify-between mb-4 border border-spacing-4 border-black mt-6 rounded-xl text-3xl bg-black w-1/2 text-white font-mono ml-20"}>
+                <div key={agente.uuid} className={"flex flex-col gap-9 justify-between mb-4 border " +
+                    "border-spacing-4 border-black mt-6 rounded-xl text-3xl bg-black w-1/2" +
+                    " text-white font-mono ml-20 shadow-lg transition-shadow duration-500 ease-in-out hover:shadow-3xl hover:shadow-white "}>
                     Agente: {agente.displayName}
                     <img className={"w-1/2"} src={agente.displayIcon} alt="Icone do agente" />
                     <button
