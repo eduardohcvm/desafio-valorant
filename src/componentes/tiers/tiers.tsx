@@ -53,10 +53,10 @@ const ListaDeTiers = () => {
                 placeholder="Procure por um tier"
                 className="p-2 border rounded mb-6"
             />
-            <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-2  w-1/2 h-1/2 ">
+            <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-2  w-1/2 h-1/2">
                 {tiers.length > 0 && (
-                    <div key={tiers[0].uuid} className="p-6 bg-gray-200 rounded-lg">
-                        <h2 className="text-2xl font-bold mb-4 ">Lista dos tiers do Valorant</h2>
+                    <div key={tiers[0].uuid} className="p-6 bg-cyan-950 rounded-lg">
+                        <h2 className="text-2xl font-bold mb-4 flex justify-center text-white ">Lista dos tiers do Valorant</h2>
                         <div className="flex flex-wrap gap-4 justify-center ">
                             {filterTiers.map((t) => (
                                 <div

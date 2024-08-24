@@ -77,17 +77,18 @@ const ListaDeAgentes = () => { //função de lista dos agentes
     };
 
     return (
-        <div className={"grid grid-cols-3 gap-8 bg-red-400"}> {/* grid para os agentes (dividir em 3 e criar o botao de detalhes*/}
+        <div className={"grid grid-cols-4 gap-8 bg-red-400"}> {/* grid para os agentes (dividir em 3 e criar o botao de detalhes*/}
             {data.map(agente => (
-                <div key={agente.uuid} className={"flex flex-col  justify-between mb-4 border " +
+                <div key={agente.uuid} className={"flex flex-col  justify-between mb-2 border " +
                     "border-spacing-4 border-black mt-4 rounded-xl text-3xl bg-black w-1/2" +
                     " text-white font-mono ml-20 shadow-lg transition-shadow duration-500 ease-in-out hover:shadow-3xl hover:shadow-white"}>
                     <div className={"flex flex-row justify-center"}>{agente.displayName}</div>
 
-                    <img className={"w-1/2"} src={agente.displayIcon} alt="Icone do agente" />
+                    <img className={"w-1/10"} src={agente.displayIcon} alt="Icone do agente" />
+                    <img src="" alt=""/>
                     <button
                         onClick={() => handleAgentClick(agente.uuid)} // Chama a função para redirecionar
-                        className={"p-4 rounded-xl text-white bg-red-600"}
+                        className={"p-4 rounded-xl text-white bg-cyan-800"}
                     >
                         Ver detalhes
                     </button>

@@ -31,7 +31,7 @@ const DetalhesAgentes = () => {
             </div>
 
 
-            <div className="flex-1 bg-gray-700 p-6 rounded-lg shadow-lg text-white transition-shadow duration-500 ease-in-out hover:shadow-3xl hover:shadow-white">
+            <div className="flex-1 bg-cyan-950 p-6 rounded-lg shadow-lg text-white transition-shadow duration-500 ease-in-out hover:shadow-3xl hover:shadow-white">
                 <h2 className="text-4xl font-bold mb-4">{agente.displayName}</h2>
                 <p className="text-lg mb-4">{agente.description}</p>
 
