@@ -2,7 +2,9 @@
 
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Detalhes_agentes from "../detalhes_agentes/detalhes_agentes";
+
 
 export interface Atype {
     uuid: string
@@ -70,21 +72,20 @@ const ListaDeAgentes = () => {
             .catch((error) => console.log(error));
     }, []);
 
-    const handleAgentClick = (id:string) =>{
-        navigate(`/detalhes_agentes/${id}`)
-    }
+    const handleAgentClick = (id: string) => {
+        navigate(`/detalhes_agentes/${id}`);
+    };
 
     return (
         <div className={"grid grid-cols-3 gap-10"}>
             {data.map(agente => (
-                <div key={agente.uuid} className={"flex flex-col gap-9 justify-between mb-4 border border-spacing-4 border-black mt-6 rounded-xl text-3xl bg-black w-1/2 text-white font-mono"}>
+                <div key={agente.uuid} className={"flex flex-col gap-9 justify-between mb-4 border border-spacing-4 border-black mt-6 rounded-xl text-3xl bg-black w-1/2 text-white font-mono ml-20"}>
                     Agente: {agente.displayName}
                     <img className={"w-1/2"} src={agente.displayIcon} alt="Icone do agente" />
                     <button
                         onClick={() => handleAgentClick(agente.uuid)} // Chama a função para redirecionar
                         className={"p-4 rounded-xl text-white bg-red-600"}
                     >
-                        <Detalhes_agentes/>
                         Ver detalhes
                     </button>
                 </div>
